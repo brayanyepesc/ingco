@@ -1,4 +1,4 @@
-import { Navbar } from "@/components";
+import { ModalRenderer, Navbar } from "@/components";
 
 export default function AppLayout({
   children,
@@ -9,6 +9,7 @@ export default function AppLayout({
     <main className="w-full h-full">
       <Navbar />
       {children}
+      <ModalRenderer />
     </main>
   );
 }

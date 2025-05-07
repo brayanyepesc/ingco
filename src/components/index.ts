@@ -14,3 +14,5 @@ export { UserSelectCell } from "./molecules/UserSelectCell";
 export { UsersTableHeader } from './organisms/UsersTableHeader';
 export { UsersTableFooter } from "./organisms/UsersTableFooter";
 export { UsersTableContent } from "./organisms/UsersTableContent";
+export { ModalRenderer } from "./templates/ModalRenderer";
+export { MODAL_COMPONENTS } from './organisms/ModalComponents';

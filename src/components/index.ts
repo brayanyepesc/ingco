@@ -11,3 +11,6 @@ export { UserNameCell } from "./molecules/UserNameCell";
 export { UserLastnameCell } from "./molecules/UserLastnameCell";
 export { UserSelectHeader } from "./molecules/UserSelectHeader";
 export { UserSelectCell } from "./molecules/UserSelectCell";
+export { UsersTableHeader } from './organisms/UsersTableHeader';
+export { UsersTableFooter } from "./organisms/UsersTableFooter";
+export { UsersTableContent } from "./organisms/UsersTableContent";

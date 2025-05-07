@@ -1,3 +1,5 @@
+"use client";
+
 import { User } from "@/types/general.types";
 import { Table } from "@tanstack/react-table";
 import { Input } from "../ui/input";
@@ -9,8 +11,10 @@ import {
 } from "../ui/dropdown-menu";
 import { Button } from "../ui/button";
 import { ChevronDown } from "lucide-react";
+import { useModalStore } from "@/store/useModalStore";
 
 export const UsersTableHeader = ({ table }: { table: Table<User> }) => {
+  const { openModal } = useModalStore();
   return (
     <div className="flex items-center py-4 gap-2">
       <Input
@@ -57,6 +61,7 @@ export const UsersTableHeader = ({ table }: { table: Table<User> }) => {
             })}
         </DropdownMenuContent>
       </DropdownMenu>
+      <Button className="cursor-pointer" onClick={() => openModal("createUser")}>Agregar</Button>
     </div>
   );
 };

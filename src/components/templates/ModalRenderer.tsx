@@ -1,3 +1,5 @@
+"use client";
+
 import { useModalStore } from "@/store/useModalStore";
 import { MODAL_COMPONENTS } from "@/components";
 

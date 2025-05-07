@@ -10,7 +10,7 @@ import {
 export const UsersTable = () => {
   const { table, columnsLength } = useTable();
   return (
-    <div className="w-full">
+    <div className="w-full p-20">
       <UsersTableHeader table={table} />
       <UsersTableContent table={table} columnsLength={columnsLength} />
       <UsersTableFooter table={table} />

@@ -18,7 +18,7 @@ export const UsersTableContent = ({
 }) => {
   return (
     <div className="rounded-md border">
-      <Table>
+      <Table className="min-h-screen">
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>

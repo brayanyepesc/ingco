@@ -15,7 +15,7 @@ export default function Home() {
   }, [setUsers, isEmpty, hasHydrated]);
   if (!hasHydrated) return <Loading />;
   return (
-    <section className="w-full min-h-screen">
+    <section className="w-full h-full">
       <UsersTable />
     </section>
   );

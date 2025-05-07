@@ -6,7 +6,7 @@ export default function AppLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main>
+    <main className="w-full h-full">
       <Navbar />
       {children}
     </main>

@@ -10,9 +10,11 @@ import {
 import { Button } from "../ui/button";
 import { MoreHorizontal } from "lucide-react";
 import { User } from "@/types/general.types";
+import { Row } from "@tanstack/react-table";
 
-export const UserActionsCell = ({ user }: { user: User }) => {
+export const UserActionsCell = ({ row }: { row: Row<User> }) => {
   const { deleteUser } = useAppStore();
+  const user = row.original;
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

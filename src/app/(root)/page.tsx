@@ -1,6 +1,6 @@
 "use client";
 
-import { UsersTable } from "@/components";
+import { Loading, UsersTable } from "@/components";
 import { fetchUsers } from "@/lib/fetcher";
 import { useAppStore } from "@/store/useAppStore";
 import { useEffect } from "react";
@@ -13,7 +13,7 @@ export default function Home() {
       fetchUsers().then(setUsers);
     }
   }, [setUsers, isEmpty, hasHydrated]);
-  if (!hasHydrated) return <div>Cargando datos...</div>;
+  if (!hasHydrated) return <Loading />;
   return (
     <section className="w-full min-h-screen">
       <UsersTable />

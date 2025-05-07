@@ -6,10 +6,14 @@ import { useAppStore } from "@/store/useAppStore";
 import { useEffect } from "react";
 
 export default function Home() {
-  const { setUsers } = useAppStore();
+  const { users, setUsers, hasHydrated } = useAppStore();
+  const isEmpty = users.length === 0;
   useEffect(() => {
-    fetchUsers().then(setUsers);
-  }, [setUsers]);
+    if (hasHydrated && isEmpty) {
+      fetchUsers().then(setUsers);
+    }
+  }, [setUsers, isEmpty, hasHydrated]);
+  if (!hasHydrated) return <div>Cargando datos...</div>;
   return (
     <section className="w-full min-h-screen">
       <UsersTable />

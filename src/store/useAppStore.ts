@@ -7,6 +7,8 @@ export interface AppStore {
   addUser: (user: User) => void;
   deleteUser: (id: number) => void;
   setUsers: (users: User[]) => void;
+  hasHydrated: boolean;
+  setHasHydrated: (state: boolean) => void;
 }
 
 export const useAppStore = create<AppStore>()(
@@ -20,10 +22,15 @@ export const useAppStore = create<AppStore>()(
           users: state.users.filter((u) => u.id !== id),
         })),
       setUsers: (users) => set({ users }),
+      hasHydrated: false,
+      setHasHydrated: (state) => set({ hasHydrated: state }),
     }),
     {
       name: "store",
       storage: createJSONStorage(() => sessionStorage),
+      onRehydrateStorage: () => (state) => {
+        state?.setHasHydrated(true);
+      },
     }
   )
 );

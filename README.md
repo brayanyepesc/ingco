@@ -26,6 +26,12 @@ Aplicación creada con **Next.js (TypeScript)** que consume una API externa para
 
 ---
 
+## ⚙️ Instalación (previous)
+
+```
+Debes crearte un archivo .env con la información enviada o del admin del proyecto para que funcione correctamente la app
+```
+
 ## ⚙️ Instalación
 
 ```bash
